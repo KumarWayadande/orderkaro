@@ -1,0 +1,18 @@
+body{
+    cursor: auto;
+    background: #FBFBFC;
+    text-align: center;
+}
+
+
+.deliveryboy{
+    width: 50%;
+    margin: 1% auto 0 auto;
+}
+
+
+.heading{
+    margin-top: -112px;
+    font-family: 'Sigmar', cursive;
+    color: #4c4c68;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= Title%></title>
+
+    <link rel="stylesheet" href="/css/PaymentPage.css">
+         <!-- Font Awesome -->
+         <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+         rel="stylesheet"
+       />
+</head>
+<body>
+    
+    <div class='container'>
+        <div class='window'>
+          <div class='order-info'>
+            <div class='order-info-content'>
+              <h2>Order Summary</h2>
+            <!-- <div class='line'></div> -->
+
+
+
+            <div class="scroll">
+
+              <% cart.forEach(element => { %>
+                <table class='order-table'>
+                    <tbody>
+                      <tr>
+                        <td><img src='<%= element.productImageLink%>' class='full-width'></img>
+                        </td>
+                        <td>
+                          <br> <span class='thin'><%= element.productName%></span>
+                          <br> <span class='thin small'> <%= element.description%><br><br></span>
+                        </td>
+          
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class='line'></div>
+                          <div class='price'><i class="fa fa-inr" aria-hidden="true"></i><%= (element.pricePerQty * element.__v)%> <span>Qty</span> : <%= element.__v%></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <% }); %>
+            </div>
+              
+             
+              <div class='line'></div>
+              <div class='total'>
+                <span style='float:left;'>
+                  <div class='thin dense'>TOTAL</div>
+                  <div class='thin dense'>TAX 5%</div>
+                  <div class='thin dense'>Delivery</div>
+                  TOTAL
+                </span>
+                <span style='float:right; text-align:right;'>
+            <%    var total = 0; %>
+            <%    var totalTax = 0; %>
+            <%    cart.forEach((element)=>{  %>
+            <%        total = total + parseInt((element.__v * element.pricePerQty)); %>
+            <%    }); %>
+            <%    totalTax = total * 0.05;  %>
+            <%    grandTotal = total + totalTax + 4.95; %>
+                  <div class='thin dense'><%= parseInt(total)%></div>
+                  <div class='thin dense'><%= parseInt(totalTax)%></div>
+                  <div class='thin dense'>4.95</div>
+                  <%= parseInt(grandTotal) %>
+                </span>
+              </div>
+      </div>
+      </div>
+
+
+
+
+              <div class='credit-info'  id="credit-info">
+                <div class='credit-info-content'>
+                  
+                    <div class='credit-info'>
+                        <div class='credit-info-content'>
+                        <form action="/paymentUserAddressDetails" method="post">
+                                
+                          
+                            Full Address
+                          <input class='input-field' name="full-address"></input>
+                          PathWay
+                          <input class='input-field' name="path-way"></input>
+                          City
+                          <input class='input-field' name="city"></input>
+                          State
+                          <input class='input-field' name="state"></input>
+                          Nearest Location
+                          <input class='input-field' name="nearest-location"></input>
+                          
+                          <button class='pay-next-btn' name="pay-next-btn" onclick="redirectToNextPage();">Next</button> 
+
+                        </form>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+      </div>
+
+
+      <script src="/JS4/PaymentPage.js">
+      </script>
+</body>
+</html>

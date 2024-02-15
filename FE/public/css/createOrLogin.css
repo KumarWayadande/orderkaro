@@ -1,0 +1,89 @@
+/* .btn-create{
+    background-color: #00FFAB;
+}
+.btn-create, .btn-login{
+    margin: 10px;
+    color: white;
+    font-weight: bolder;
+}
+.btn-login{
+    background-color: grey;
+}
+
+.buttons{
+    margin-top: 5%;
+    width: fit-content;
+    margin: 10% auto;
+} */
+
+
+.btn-create{
+    background-color: #00FFAB;
+}
+.btn-create, .btn-login{
+    margin: 10px;
+    color: white;
+    font-weight: bolder;
+}
+.btn-login{
+    background-color: grey;
+}
+
+.buttons{
+    margin-top: 5%;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+
+/* Working section begins */
+.working{
+    background-color: #2b1e16;
+    margin-bottom: 3%;
+    /* padding: 0 0 0 0; */
+    background-color: #fff;
+    text-align: center;
+    margin: 5% 0 0 0;
+} 
+.working-holder{
+    color: #000;
+    margin: 4% auto 0 9%;
+    padding: 0 5% 0 0;
+}  
+.working-title-to-be-bold, .working-numbers{
+    font-weight:800;
+    text-shadow: 2px black;
+    margin: 5% 0 2% 0 ;
+    font-size: x-large;
+}
+.working-numbers{
+    color: #00FFAB;
+    text-shadow: 2px grey;
+    font-size: 40px;
+}
+
+.working-img{
+    width: 40%;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.pricing{
+    width: 70%;
+}
+/* End of working section */
+
+@media screen and (max-width: 900px){
+    /* .eating-boy, .another-boy, .delivery-boy{
+        margin: 0 0 20px 0;
+    } */
+    
+    .features1-img, .working, .working-holder, .working-img{
+        margin-top: 15%;
+    }
+
+    .title-subtext{
+        padding: 0 2%;
+    }
+}

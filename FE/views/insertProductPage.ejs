@@ -1,0 +1,102 @@
+<%- include("partials/header.ejs") -%>
+
+<link rel="stylesheet" href="/css/insertProductPage.css">
+  </head>
+
+  <body>
+
+    <!-- 
+        Navbr for shop Admin
+     -->
+    <%- include("partials/navbarForShopAdmin.ejs") -%>
+
+
+    <div class="inputs">
+
+      <% if(flag == true) { %>
+        <div class="alert alert-success" role="alert">
+          Product Inserted Successfully. Enter Another Product or Quit.
+        </div>
+      <% } %>
+      
+      
+
+
+
+      <form action="/insertProductPage" method="post">
+        
+     
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Product Name</span>
+            <input type="text" id="productName" name="productName" class="form-control" placeholder="" >
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"> Price Per QTY</span>
+            <input type="text" id="pricePerQty" name="pricePerQty" class="form-control" placeholder="" >
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Product Image Link</span>
+            <input type="text" id="productImageLink" name="productImageLink" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Product's One Line Description</span>
+            <input type="text" id="description" name="description" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <button type="button" class="btn btn-primary insert" onclick="validator();" id="insert">Insert</button>
+        </form>
+    </div>
+
+    <div class="toast" data-bs-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="..." class="rounded me-2" alt="...">
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </div>  
+      
+      
+
+
+      <script>
+
+          function validator(){
+            if(document.getElementById("productName").value == "" || document.getElementById('productName').value == null){
+                alert("Please Enter Product Name");
+            }
+            else if(document.getElementById('pricePerQty').value == "" || document.getElementById('pricePerQty').value == null){
+              alert("Please Enter price");
+            }
+            else if(document.getElementById('productImageLink').value == "" || document.getElementById('productImageLink').value == null){
+              alert("Please Enter Image Link ");
+            }
+            else if(document.getElementById('description').value == "" || document.getElementById('description').value == null){
+              alert("Please Enter Product Description");
+            }
+            else {
+              document.getElementById('insert').type="submit";
+              document.getElementById('insert').click();
+            }
+          }
+
+      </script>
+
+
+      <!-- 
+        Footer for shop Admin
+     -->
+    <%- include("partials/footer") -%>
+
+    <!-- 
+
+        product Name
+        price per piece
+        product image link
+        one line description
+        weight or number of items per packet 
+        inStock
+
+     -->

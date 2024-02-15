@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") -%>
+      <link rel="stylesheet" href="\css\displayProductsAdmin.css" />
+  </head>
+
+  <body>
+    <%- include("partials/navbarForShopAdmin.ejs") -%>
+
+    <div class="container-main">
+        <div class="row">
+
+            <% if(productList.length == 0) {%>
+                <h1>No products</h1>
+            <% }else { %>
+            <% productList.forEach(function(product){ %>
+                <!-- <form action="/" method="post"> -->
+                    <div class="card card-product" style="width: 18rem;">
+                        <!-- 268 x 180 pixels image should be there -->
+                        <!-- Image background should be white or transperant -->
+                        <form action="<%="/product/"+(product._id).toHexString()%>" method="get" id="<%=(product._id).toHexString()+"1"%>" name="deletion-form">
+                        <img class="card-img-top" height="60%" width="5%" src="<%=product.productImageLink%>" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title" name="productName"><%=product.productName%></h5>
+                          <p class="card-text" name="description"><%=product.description %></p>
+                          <button type="submit" name="updateBtn" class="btn btn-primary" value="<%=(product._id).toHexString()%>">Update</button>
+                          <button type="button" id="<%=(product._id).toHexString()%>" name="deleteBtn" class="btn btn-danger" value="<%=(product._id).toHexString()%>" onclick="formDecider(this.id)">Remove</button>
+                        </div>
+                        </form>
+                      </div>    
+                <!-- </form> -->
+            <% }) }%>
+        </div>  <!-- -End of the Row -->
+    </div>  <!-- -End of the Container -->
+
+
+    <script>
+    
+    function formDecider(id){
+        btn = document.getElementById(id);
+        btn.type="submit";
+        var actionUrl = btn.getAttribute("value");
+        console.log(actionUrl);
+        document.getElementById(id+"1").action = "/"+actionUrl;
+        document.getElementById(id+"1").setAttribute("method", "post");
+        btn.click();
+    }
+    
+    </script>
+
+    <%- include("partials/footer") -%>

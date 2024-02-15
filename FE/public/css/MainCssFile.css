@@ -1,0 +1,327 @@
+body{
+    color: black;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Hind Madurai', sans-serif;
+}
+.navbar-container{
+       padding: 1% 13%;
+       background-color: #fff;
+       margin-bottom: 3.5%;
+}
+
+.first-section-text{
+    margin: 4% auto;
+    width: 70%;
+    text-align: center;
+    align-items: center;
+}
+.first-section{
+    background-color: #f7fdfa;
+    padding-bottom: 5%;
+}
+.d-flex{
+    margin: 0 1%;
+}
+.brand-navbar{
+    box-shadow: none;
+}
+
+/* Buttons section on top  */
+.btn-dark{
+    background-color: rgb(0 210 144);
+    box-shadow: none;
+    border-radius: 1000px;
+}
+.btn-dark:hover{
+    box-shadow: none;
+    background-color: white;
+    color: black;
+}
+/*End of Buttons section on top  */
+
+
+/* Search bar */
+.search-bar{
+    width: 60%;
+    margin: 0 auto;    
+}
+
+.form-outline .form-control {
+    border: 1px solid black;
+
+}
+/* End of search bar */
+
+
+
+.pune-para{
+    text-align: justify;
+}
+/* End of Special Service paragraph */
+
+
+/* The line of Paan */
+.headline{
+    background-color:#0d1732;
+   
+}
+.paan-image, .card-image{
+    width: 4%;
+    margin: 0 1% 0 0;
+    cursor: pointer;
+}
+.headline-container{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    color: #FFF;
+    align-items: center;
+}
+
+.paan-text{
+    margin: 0;
+}
+
+
+/* End of the line of paan */
+
+
+/* For The Card Section */
+.card-items{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.card-image{
+    width: 24%;
+    margin: 3% 1% 0 0;
+    border-radius: 10px;
+}
+/*End of the Card Section */
+.text-center{
+    width: 60%;
+ 
+}
+/* Meat-and-fish , paan and etc. */
+
+
+/*  End ofMeat-and-fish , paan and etc. */ 
+
+
+/* Top Picks for you */
+.top-picks{
+    margin-top: 5%;  
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+
+/* End of Top Picks for you */
+
+/* App preview Section */
+.app-preview{
+    width: 20%;
+
+}
+/* End of App preview Section */
+
+
+/* Footer Section */
+
+.country{
+    padding: 5% 0;
+    width: 70%;
+}
+
+.row{
+    text-align: left;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  */
+}
+/* End of Footer Section */
+
+
+
+/* Media Query Section  */
+@media (max-width:980px){
+    .d-flex{
+        margin: 1% 0;
+    }
+
+} 
+@media  (max-width:600px) {
+    .card-image{
+        width: 60%;
+    }
+    .card-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .headline{
+        margin-top: 15%;
+    }
+    .card-image-top-picks{
+        width: 60%;
+    }
+}
+/* End of Media Query Section  */
+
+
+/* Footer Section */
+
+/* Footer first section */
+.footer1{
+    margin: 5% 0 0 0;
+    padding: 4% 0 1% 0;
+    background-color: #171e30;
+}
+
+.footer-first-section, .footer-second-section{
+    text-align: justify;
+    width: 70%;
+    margin: 0 auto;
+    color: #fff;
+    padding-bottom: 3%;
+    border-bottom: 0.1px solid grey;
+}
+/* End of footer first section  */
+
+
+
+/* Footer second section starts */
+
+.footer-second-section{
+    margin-top: 3%;
+    padding: 0;
+    border: none;
+}
+
+.footer-second-section-logo1{   width: 50%;   }
+.footer-second-section-logo2{   width: 100%;   }
+
+/*  Footer second section ends */
+/* End of footer section */
+
+
+/*  Fonts that are to be bold are added here  
+    using font weight property they are made bold
+*/
+
+.footer-first-section-heading, .paan-text{
+    font-weight: 800;
+}
+
+
+
+
+/* Demo */
+.demo-footer{
+    background-color: #0d1732;
+    padding: 3% 0;
+}
+
+.demo-first-header, .demo-second-header{
+    padding-bottom: 3%;
+    margin:3% auto;
+    width: 70%;
+    color: #fff;
+    text-align: justify;
+    border-bottom: 1px solid #f7fdfa;
+}
+
+.demo-second-header{
+    border: none;
+    padding: 0;
+}
+.demo-footer-first-img{
+    width: 20%;
+}
+.demo-footer-second-img{
+    width: 100%;
+}
+
+.personal-info{
+    margin: auto auto 0 30%;
+    padding-top: 7%;
+    padding-bottom: 1%;
+    width: 40%;
+    float: center;
+    position: relative; 
+    
+}
+
+.account-info{
+    margin: 0 auto 5% 30%;
+    width: 40%;
+    float: center;
+    position: relative; 
+    
+}
+
+.Shop-info{
+    margin: 5% auto 5% 30%;
+    width: 40%;
+    float: center;
+    position: relative; 
+}
+.for-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.personal-info-text, .T-and-C{
+    text-align: center;
+    margin: 2% auto 4% auto;
+    font-weight: bold;
+    
+    /* color: #fff; */
+}
+
+.section-1, .section-2, .section-3{
+    background-color: #fff;
+    
+}
+
+/*  Added Grey color for background  in all the section of Details */
+.form-outline{
+ background-color: #EEEEEE;
+}
+
+
+/* css for place order button */
+.btn-block{
+    margin: 10% auto auto 12.5%;
+    width: 70%;
+}
+
+/* a{
+    color: white;
+}
+a:hover{
+    color: #62ffcd;
+    text-decoration: none;
+} */
+
+
+.custom-width{
+    width: 20%;
+}
+
+
+/* Margin for terms and conditons */
+.form-check{
+    margin: 2%;
+}
+.radion-button{
+    margin: 2%;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: #62ffcd;
+    text-decoration: none;
+}

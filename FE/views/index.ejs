@@ -1,0 +1,217 @@
+<%- include("partials/header.ejs") -%>
+      <!-- <link rel="stylesheet" href="\css\MainCssFile.css" /> -->
+  </head>
+
+  <body>
+    <%- include("partials/navbar.ejs") -%>
+
+    <!-- End of Navbar -->
+
+    <!-- App Specification  -->
+    <div class="first-section">
+      <div class="headline">
+        <div class="headline-container">
+          <img class="paan-image" src="Images\paan-image.jpg" alt="" />
+          <p class="paan-text">
+            Order Paan items, munchies and much more on our new OrderKaro Mo app
+          </p>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+
+      <div class="first-section-text">
+        <!-- <div class="input-group search-bar">
+        <div class="form-outline">
+          <input type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+       </div> -->
+
+        <!-- End of Search Bar -->
+
+        <!-- Paragraph For our special services  -->
+        <div class="pune-para">
+           <h2 class="pune"><%=city%></h2>
+          <p class="">
+            Why step out when you can get everything delivered home with the tap
+            of a button? Pune's favourite delivery app gets you Food, Grocery,
+            Medicine, Pet Supplies, Fruits & Vegetables, Meat & Fish, Health &
+            Wellness, Gifts and Send Packages from one end of the city to the
+            other. From your local kirana stores to your favourite brands,
+            grocery shopping to your forgotten charger, we are always on the
+            move for you. Why worry about your chores, when you can get it all
+            Dun!
+          </p>
+        </div>
+
+        <div class="card-items">
+         <img
+            src="Images/grocery and essential.jpg"
+            class="card-img-top card-image"
+            alt="..grocery and Essentials"
+            onclick="redirectToNewUrl();"
+          />
+          <img
+            src="Images/Fruits and Vegetables.jpg"
+            class="card-img-top card-image"
+            alt="..Fruits and Vegetables"
+            onclick="displayNotWorking();"
+          />
+          <img
+            src="Images/Pickup and Drop.jpg"
+            class="card-img-top card-image"
+            alt="..Pickup and Drop"
+            onclick="displayNotWorking();"
+          />
+          <img
+            src="Images/Restaurant.jpg"
+            class="card-img-top card-image"
+            alt="..Restaurant"
+            onclick="displayNotWorking();"
+          />
+        </div>
+        <!-- End of Paragraph For our special services  -->
+
+        <!-- Top Picks on our restorants -->
+        <div class="top-picks">
+          <h2>Top picks for you</h2>
+        </div>
+
+        <div class="card-items">
+          <img
+            src="Images/GetBusy.jpg"
+            class="card-img-top card-image-top-picks card-image"
+            alt="Get-Busy "
+            onclick="displayNotWorking();"
+          />
+          <img
+            src="Images/Shelf-Love.jpg"
+            class="card-img-top card-image-top-picks card-image"
+            alt="Shelf-Love "
+            onclick="displayNotWorking();"
+          />
+          <img
+            src="Images/Bite-ON-Time.jpg"
+            class="card-img-top card-image-top-picks card-image"
+            alt="Bite-On_Time "
+            onclick="displayNotWorking();"
+          />
+          <img
+            src="Images/Move-It.jpg"
+            class="card-img-top card-image-top-picks card-image"
+            alt="Move-It "
+            onclick="displayNotWorking();"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ENd of Top Picks on our restorants -->
+
+    <!-- Dunzo Daily app preview Section -->
+    <!-- <div class="download-section">
+  <img class="app-preview"src="Images/dunzo-daily-app-preview.jpg" alt="dunzo-daily-app-preview">
+  <P>All this from the convenience of your</p>
+  <p>Download the Dunzo mobile app.</P>
+    <img src="Images/dplaystore1.jpg" alt="Download on playstore">
+    <img src="Images/Mac-appstore.jpg" alt="Download on Mac-appstore">
+
+
+</div> -->
+    <!-- End of Dunzo Daily app preview Section -->
+
+    <div class="country container">
+      <h3 id="country-heading">Areas we deliver to</h3>
+      <div class="">
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <p>Amanora</p>
+            <p>Baner</p>
+            <p>Bibvewadi</p>
+            <p>Dhanori</p>
+            <p>Ghorpadi</p>
+            <p>Hinjewadi Phase-I</p>
+            <p>Kalewadi</p>
+            <p>Katraj</p>
+            <p>Koregoan Park</p>
+            <p>Mundhwa</p>
+            <p>Nigdi</p>
+            <p>Pimple Gurav</p>
+            <p>Pune Airport</p>
+            <p>Ravel</p>
+            <p>Shahu Nagar</p>
+            <p>Tathawade</p>
+            <p>Wagholi</p>
+            <p>Wakdewadi</p>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <p>Ambegaon</p>
+            <p>Bavdhan</p>
+            <p>Camp</p>
+            <p>Dhayari</p>
+            <p>Gopalpatti</p>
+            <p>Hinjewadi Phase-II</p>
+            <p>Kalyani Nagar</p>
+            <p>Khadki</p>
+            <p>Kothrud</p>
+            <p>Nande</p>
+            <p>Parvati Paytha</p>
+            <p>Pimple Nilakh</p>
+            <p>Pune Contonment</p>
+            <p>Sangamvadi</p>
+            <p>Shivaji Nagar</p>
+            <p>Tindre Nagar</p>
+            <p>Wagholi Extension-I</p>
+            <p>Wanowire</p>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <p>Aundh</p>
+            <p>Bavdhan Extension</p>
+            <p>Chichwad</p>
+            <p>Erandwane</p>
+            <p>Gujarwadi</p>
+            <p>Hinjewadi Phase-III</p>
+            <p>Karve Nagar</p>
+            <p>Kharadi</p>
+            <p>Lohegaon</p>
+            <p>Nanded City</p>
+            <p>Pashan</p>
+            <p>Pimple Saudagar</p>
+            <p>Range Hills</p>
+            <p>Sangavade</p>
+            <p>Sus</p>
+            <p>vadgaon Sheri</p>
+            <p>Wagholi Extension-II</p>
+            <p>Warje</p>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-md-4">
+            <p>Balewadi</p>
+            <p>Bhugaon</p>
+            <p>Dhankawadi</p>
+            <p>Fursungi</p>
+            <p>Handewadi</p>
+            <p>Hinjewadi Phase-III Extension</p>
+            <p>kate Wasti</p>
+            <p>Kondhwa</p>
+            <p>Magarpatta City</p>
+            <p>Narhe</p>
+            <p>Pavana Nagar</p>
+            <p>Pimpri</p>
+            <p>Rasta Peth</p>
+            <p>Sasane Nagar</p>
+            <p>Swargate</p>
+            <p>Viman Nagar</p>
+            <p>Wakad</p>
+            <p>Yerwada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="\JS4\index.js"></script>
+
+    <%- include("partials/footer") -%>

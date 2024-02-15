@@ -1,0 +1,29 @@
+<%- include("partials/header") -%>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+<link rel="stylesheet" href="css/shopAdminLoginPage.css">
+<body>
+  <%- include("partials/navbar") -%>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form action="/shopAdminLogin" method="post">
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" name="gstinNo" placeholder="GSTIN Number" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" name="adminPassword" placeholder="password" autocomplete="new-password">
+      </div>
+      <!-- <a href="#" class="link">Forgot Your Password?</a> -->
+      <p class="resultMessage"><%= resultMessage %></p>
+    </div>
+    <div class="action">
+        <a href="/shopAdminRegister"><button type="button">Register for a Shop</button></a>
+        <button type="submit">Sign in</button>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+  <script  src="/JS4/shopAdminLoginPage.js"></script>
+
+  <%- include("partials/footer") -%>

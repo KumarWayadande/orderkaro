@@ -1,0 +1,59 @@
+
+
+<%- include("partials/header.ejs") -%>
+
+      
+    <!-- Custom styles for this template -->
+    <link href="\css\heroes1.css" rel="stylesheet">
+    <link href="\css\heroes.css" rel="stylesheet">
+  </head>
+  <body>
+<main>
+ 
+
+  <%- include("partials/navbarForShopAdmin.ejs") -%>
+<!-- Needed -->
+  <!-- <div class="b-example-divider"></div> -->
+
+  <div class="container col-xl-10 col-xxl-8 px-4 py-3">
+      <% productDetails1.forEach(function(productDetails){ %>
+    <div class="row align-items-center g-lg-5 py-5">
+
+     
+      <div class="col-lg-7 text-center text-lg-start">
+        <img src="<%=productDetails.productImageLink%>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5 paddingRemover">
+        <form action="<%="/product/update/"+(productDetails._id).toHexString()%>" method="post" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+          <div class="form-floating mb-3">
+            <input type="text" value="<%=productDetails.productName%>" name="productName" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Product Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" value="<%=productDetails.pricePerQty%>" name="pricePerQty" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Price Per Quantity</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" value="<%=productDetails.productImageLink%>" name="productImageLink" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Product Image Link</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" value="<%= productDetails.description %>" name="description" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Description</label>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" name="inStock" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Out Off Stock</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Update</button>
+          <hr class="my-4">
+          <small class="text-body-secondary">By clicking Update, you make changes to the products details.</small>
+        </form>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+
+  <!-- Needed -->
+</main>
+  <%- include("partials/footer.ejs") -%>

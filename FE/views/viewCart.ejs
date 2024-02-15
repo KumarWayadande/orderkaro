@@ -1,0 +1,101 @@
+
+<%- include("partials/header.ejs") -%>
+<link rel="stylesheet" type="" href="/css/view.css">
+<title>Title of the document</title>
+
+</head>
+
+<body>
+  <%- include("partials/navbar.ejs") -%>
+
+  <div class="container">
+    <div class="row cart-section">
+
+      <% if(productDetails.length == 0) {%>
+          <h1>No products Found in your area please wait until a product is added in your area</h1>
+      <% }else %>
+      <%  { %>
+        <div class="col-lg-6">
+          <h2 class="heading">Products</h2>
+          <div class="scroll">
+            <div class="list-group">
+  
+
+              <% productDetails.forEach((product)=>{ %>
+            
+            <form action="<%="/addToCart/"+(product._id).toHexString()%>" method="post">
+              <a href="#" class="list-group-item list-item-hover list-group-item-action " aria-current="true">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <img
+                      src="<%= product.productImageLink%>"
+                      class="mx-auto product-image d-block" alt="...">
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1 product-name"><%= product.productName%></h5>
+                    </div>
+                    <p class="mb-1 one-line-description"><%= product.description%></p>
+  
+                    <div class="price-button">
+                      <p class="mb-2 product-price"><i class="fa-solid fa-indian-rupee-sign"></i><%= product.pricePerQty %></p>
+                      <button type="submit" class="btn btn-product btn-success btn-sm">+ ADD </button>
+                    </div>
+                  </div>
+                </div>
+              </a>  
+            </form>
+            <%})  %>  
+ 
+            </div>
+          </div>
+        </div>
+      <% } %>
+     
+      <div class="col-lg-6">
+        <h2 class="heading">Cart</h2>
+        <div class="scroll">
+          <div class="list-group">
+
+
+          <% if(cart.length == 0) {%>
+            <div class="empty-cart" style="margin: 15% auto;">
+              <img src="\Images\empty cart.png" width="40%" alt="">
+              <p style="color: gainsboro;">Your cart is empty <br> Add items to get started</p> 
+            </div>
+          <% } else { %>
+
+            <% cart.forEach((cartProduct)=>{ %>
+            <form action="" method="post" id="<%=(cartProduct._id).toHexString()+"1"%>">
+            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+              <div class="col-lg-8">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1 product-name"><%= cartProduct.productName%></h5>
+                </div>
+                <p class="mb-1 one-line-description"><%= cartProduct.description%></p>
+                <p class="mb-2 product-price"><i class="fa-solid fa-indian-rupee-sign"></i><%= cartProduct.pricePerQty%></p>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" name="addBtn" onclick="incrementQty(this.id);" id="<%=(cartProduct._id).toHexString()+"addBtn"%>" value="<%= cartProduct._id.toHexString()%>" class="btn btn-increment btn-success">+</button>
+                  <button type="button" name="qyt" class="btn btn-increment btn-success"><%=cartProduct.__v %></button>
+                  <button type="button" name="removeBtn" id="<%=(cartProduct._id).toHexString()+"removeBtn"%>" onclick="decrementQty(this.id);" value="<%= cartProduct._id.toHexString()%>" class="btn btn-increment btn-success">-</button>
+                </div>
+              </div>
+            </a>
+          </form>
+          <%})%>  
+
+          <%}%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-holder">
+      <button type="button" onclick="redirectToPayment();" class="btn btn-outline-success btn-checkout btn-lg">Checkout : <%= checkoutPrice %> </button>
+    </div>
+  </div>
+
+
+  <script src="\JS4\viewCart.js"></script>
+</body>
+
+</html>

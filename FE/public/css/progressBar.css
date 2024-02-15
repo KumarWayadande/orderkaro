@@ -1,0 +1,32 @@
+.heading{
+    text-align: center;
+    font-family: 'Sigmar', cursive;
+    width: fit-content;
+    height: fit-content;
+    margin: 10% auto;
+}
+
+
+/* .progress{
+    width: 50%;
+} */
+
+.progress{
+    width: 50%;
+    margin: 2% auto;
+    /* background-color: rgb(0, 210, 144); */
+}
+
+
+.progress-bar{
+    background-color: rgb(0, 210, 144);
+}
+
+/* .sub-heading{
+    margin-left: -30px;
+} */
+/* rgb(0, 210, 144) */
+.per{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}

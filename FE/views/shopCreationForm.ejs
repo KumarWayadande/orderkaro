@@ -1,0 +1,364 @@
+
+<!-- 
+    Do not change values of id and name properties 
+    Sequence of input fields should not be changed.
+    Responsive kara
+--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/header") -%>
+    <!-- CSS Link -->
+    <!-- <link rel="stylesheet" href="RegistrationPageCss.css" /> -->
+</head>
+<body>
+
+<%- include("partials/navbar") -%>
+
+<div class="alert alert-danger" role="alert">
+  Note : Make Sure That You Have Entered Correct GSTIN Number As We Will Verify It.
+  If there are any missing values or wrong information then your request won't be accepted.
+  <br>
+  Note : Any attempt to input wrong and faulty data may result in an exception. It is beneficial to 
+  ensure that the entered data is correct and all the rules are followed. 
+</div>
+
+    
+  <!-- Start of Personal information form  -->
+  <div class="section-1">
+      <div class="for-img">
+        <h4 class="personal-info-text">Personal Information Details</h4>
+      </div>
+
+
+      <!--
+        --------------------
+        --------------------
+        Personal Information 
+        --------------------
+        --------------------
+       -->
+    <div class="personal-info">
+    <form action="/shopCreationValidation" method="POST">  
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input
+                type="text" 
+                id="shopAdminFirstName" 
+                class="form-control" name="shopAdminFirstName"/>
+              <label class="form-label"
+                     for="form6Example1"
+                     >First name
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" 
+                     id="shopAdminLastName"
+                     
+                     class="form-control" name="shopAdminLastName"/>
+
+              <label class="form-label"
+                     for="form6Example2"
+                     >Last name
+              </label>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Email input -->  
+        <div class="form-outline mb-4">
+          <input type="text" id="adminEmail" class="form-control" name="adminEmail" />
+          <label class="form-label" for="form6Example5" >Email</label>
+        </div>
+      
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+          <input type="tel" id="adminPhoneNumber" class="form-control"  name="adminPhoneNumber"/>
+          <label class="form-label" for="typePhone">Phone Number</label>
+        </div>
+
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="adminAddress" rows="4"  name="adminAddress" ></textarea> 
+          <label class="form-label" for="form6Example7">Full Address </label>
+        </div>
+      
+    </div>
+  </div>
+      <!-- End of personal information form -->
+
+       <!-- Start of Account information form  -->
+    <div class="section-2">
+        <h4 class="personal-info-text">Account Information</h4>
+      
+       <div class="account-info">
+        
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+  
+                <input type="text" 
+                       id="accountHolderName" 
+                       class="form-control"
+                       name="accountHolderName" />
+  
+                <label class="form-label"
+                       for="form6Example2">Account Holder Name
+                </label>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="bankName" class="form-control" name="bankName" />
+            <label class="form-label" for="form6Example3">Bank Name</label>
+          </div>
+        
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="bankAccountNumber" class="form-control" name="bankAccountNumber" />
+            <label class="form-label" for="form6Example4">Bank Account Number</label>
+          </div>
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="bankEmail" class="form-control" name="bankEmail"/>
+            <label class="form-label" for="form6Example5">Email Address</label>
+          </div>
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+            <label class="form-check-label" for="flexRadioDisabled">
+                Offline Banking Options
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+            <label class="form-check-label" for="flexRadioCheckedDisabled">
+              Online Banking Options<span style="color:red;font-size: small; margin-right: 10px;"> [To work with us it is necessary to have online banking options.</span>
+            </label>
+          </div>
+      </div>
+    </div>
+        <!-- End of Account information form -->
+
+
+         <!-- Start of Shop information form  -->
+    <div class="section-3">
+          <h4 class="personal-info-text">Shop Information </h4>
+        
+      <div class="Shop-info">
+       
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input
+                  type="text" 
+                  id="gstinNumber" 
+                  class="form-control"
+                  name="gstinNumber" 
+                 />
+  
+                <label class="form-label"
+                       for="form6Example1">GSTIN Number
+                </label>
+  
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+  
+                <input type="text" 
+                       id="pincode" 
+                       class="form-control"
+                       name="pincode" />
+  
+                <label class="form-label"
+                       for="form6Example2">Pincode
+                </label>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text" 
+                    id="panNo" 
+                    class="form-control"
+                    name="panNo" />
+
+            <label class="form-label" 
+                    for="form6Example3">PAN Number</label>
+          </div>
+          
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text" 
+                   id="legalName" 
+                   class="form-control"
+                   name="legalName" />
+
+            <label class="form-label" 
+                   for="form6Example3">Legal Name of Business</label>
+          </div>
+
+          <!-- Address of shop -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="shopAddress" rows="4"  name="shopAddress" ></textarea> 
+          <label class="form-label" for="form6Example7">Full Address of Shop</label>
+        </div>
+
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text"
+                   id="shopPhoneNumber"
+                   class="form-control"
+                   name="shopPhoneNumber"/>
+
+            <label class="form-label" 
+                   for="form6Example4"
+                   >Shop Phone Number</label>
+          </div>
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text"
+                   id="tradeName"
+                   class="form-control"
+                   name="tradeName" 
+                   />
+
+            <label class="form-label" 
+                   for="form6Example4"
+                   >Trade Name</label>
+          </div>
+
+           <!-- Text input -->
+           <div class="form-outline mb-4">
+            <input type="text"
+                   id="constiOfBusiness"
+                   class="form-control"
+                   name="constiOfBusiness" 
+                   
+                   />
+
+            <label class="form-label" 
+                   for="form6Example4"
+                   >Constitution of Business</label>
+          </div>
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" 
+                   id="shopEmail" 
+                   class="form-control"
+                   name="shopEmail" />
+
+            <label class="form-label" 
+                   for="form6Example5">Shop Email</label>
+            </div>
+
+             <!-- Text input -->
+           <div class="form-outline mb-4">
+            <input type="text"
+                   id="pPlaceOfBusiness"
+                   class="form-control"
+                   name="pPlaceOfBusiness" 
+                   
+                   />
+
+            <label class="form-label" 
+                   for="form6Example4"
+                   >Principle Place of Business</label>
+          </div>
+      
+          
+             <!-- Text input -->
+             <div class="form-outline mb-4">
+              <input type="text"
+                     id="taxPayerType"
+                     class="form-control"
+                     name="taxPayerType" 
+                     />
+  
+              <label class="form-label" 
+                     for="form6Example4">Tax Payer Type</label>
+            </div>
+  
+            <div class="alert alert-danger" role="alert">
+              Note : After verification process, you need this password to log into the system.
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password"
+                     id="password"
+                     class="form-control"
+                     name="password" 
+                     />
+  
+              <label class="form-label" 
+                     for="form6Example4"
+                     >Enter Password</label>
+            </div>
+            <div class="form-outline mb-4">
+              <input type="password"
+                     id="password1"
+                     class="form-control"
+                     name="password1" 
+                     />
+  
+              <label class="form-label" 
+                     for="form6Example4"
+                     >Confirm Password</label>
+            </div>
+
+          <!-- Terms and Conditions -->
+          <p>Acknowledgement and Declaration</p>  
+          <div class="form-check">
+            <input class="form-check-input" id="firstCondition" type="checkbox" name="firstCondition" value="true">
+            <label class="form-check-label" for="flexCheckDefault">
+                I hereby declare that all the information and particulars given by me in this form are true & correct. If any of the above statements made by me are at any time found to be untrue and / or incomplete, or if any information is found to have been suppressed or omitted there by me, I am liable to be disqualified for employment and I accept the company’s right to terminate my services without notice or pay in lieu of notice.
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="secondCondition" name="secondCondition" value="true">
+            <label class="form-check-label" for="flexCheckDefault">
+                I hereby grant permission to OrderKaro Platform and its registered partners to send communication via Email/SMS/WhatsApp for any information related to OrderKaro's Shop Registration Process.
+            </label>
+          </div>
+          <!-- End of terms and conditions -->
+     <!-- End of shop information form -->
+       <button type="button" style="display: none;" id="requestButton"  class="btn btn-primary">Request</button>
+      </form>
+      <button type="button" id="submitButton" onclick="allFieldsValidation();" class="btn btn-primary">Submit Details</button>
+      </div>
+    </div>
+    
+    
+    
+    <script type="text/javascript" src="\JS4\ShopCreationFormValidation.js"></script>
+    
+<%- include("partials/footer") -%>
